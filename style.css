@@ -1,0 +1,18 @@
+.colorbox {
+    width: 200px;
+    height: 100px;
+    background-color: antiquewhite;
+    margin: 20px 30px;
+}
+.onclick {
+    width: 100px;
+    height: 50px;  
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
