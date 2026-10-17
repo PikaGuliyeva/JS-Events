@@ -16,3 +16,11 @@
     border: 2px solid black;
     cursor: pointer;
 }
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: brown;
+    transition: all 0.3s;
+    margin: 10px 30px;
+}
