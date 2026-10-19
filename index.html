@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -36,15 +37,41 @@
     <br /><br />
 
     <div class="box">Qutu</div>
-    <br><br>
+    <br /><br />
 
     <button data-price="50">Məhsul 1 - 50 AZN</button>
     <button data-price="120">Məhsul 2 - 120 AZN</button>
     <button data-price="200">Məhsul 3 - 200 AZN</button>
     <h3>Ümumi Qiymət: <span id="total">0</span> AZN</h3>
 
-    <input type="text" id = "input" placeholder="Nese yaz....">
+    <input type="text" id="input" placeholder="Nese yaz...." />
 
+    <h3>List sehifesi</h3>
+    <div class="card-body">
+      <form id="addForm">
+        <input type="text" id="addList" placeholder="List yaradin" />
+        <button id="addButton" type="submit" class="btn">
+          Buttona click edin
+        </button>
+      </form>
+      <hr />
+    </div>
+    <hr />
+    <h3>Liste elave olunanlar</h3>
+    <div class="card-body">
+      <form id="listForm">
+        <input type="text" id="searchList" placeholder="Elave edilen listi axtarin"/>
+        <hr>
+      </form>
+    </div>
+    <ul class="list-group">
+        <!-- <li class="list-group-item">
+            <a href="#" class="delete-item">
+                <i class="fa fa-remove"></i>
+            </a>
+        </li> -->
+    </ul>
+    <a href="#" id="clearButton" class="btn">Butun listleri sil</a>
     <script src="main.js"></script>
   </body>
 </html>

@@ -80,3 +80,60 @@
 //     console.log("Enter düyməsinə basıldı!");
 //   }
 // });
+
+// Task 10
+// Quick note manager
+
+const form = document.getElementById("addForm");
+const addInput = document.getElementById("addList");
+const listGroup = document.querySelector(".list-group");
+const firstCardBody = document.querySelectorAll(".card-body")[0];
+const secondCardBody = document.querySelectorAll(".card-body")[1];
+const clearButton = document.getElementById("clearButton");
+
+function runEvents() {
+    form.addEventListener("submit", addTodo);
+    listGroup.addEventListener("click", removeTodoToUI);
+}
+
+function addTodo(e) {
+    e.preventDefault();
+
+    const inputText = addInput.value.trim();
+
+    if (inputText === "") {
+        alert("Xanani bosh buraxmayin");
+    } else {
+        addTodoToUI(inputText);
+    }
+}
+
+function removeTodoToUI(e) {
+    if (e.target.className === "fa fa-remove") {
+        e.preventDefault();
+
+        const todo = e.target.parentElement.parentElement;
+        todo.remove();
+    }
+}
+
+function addTodoToUI(newTodo) {
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between";
+    li.textContent = newTodo;
+
+    const a = document.createElement("a");
+    a.href = "#";
+    a.className = "delete-item";
+
+    const i = document.createElement("i");
+    i.className = "fa fa-remove";
+
+    a.appendChild(i);
+    li.appendChild(a);
+    listGroup.appendChild(li);
+
+    addInput.value = "";
+}
+
+runEvents();
